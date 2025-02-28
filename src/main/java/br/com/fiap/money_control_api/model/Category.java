@@ -1,12 +1,14 @@
 package br.com.fiap.money_control_api.model;
 
+import java.util.Random;
+
 public class Category {
     private Long id;
     private String name;
     private String icon;
     
     public Category(Long id, String name, String icon) {
-        this.id = id;
+        this.id = Math.abs(new Random().nextLong()); //gerador de numero sendo utilizado temporariamente enquanto nao implementamos o banco de dados
         this.name = name;
         this.icon = icon;
     }
